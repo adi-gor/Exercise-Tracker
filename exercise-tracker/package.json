@@ -1,7 +1,6 @@
 {
   "name": "exercise-tracker",
   "version": "0.1.0",
-  "homepage": "https://exercise-tracker-frontend-39jf.onrender.com/index.html",
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^2.2.1",
