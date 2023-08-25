@@ -17,12 +17,13 @@ const EditExercise = () => {
   const [Users, setUsers] = useState([])
 
   const onSubmit = () => {
-    axios.post("/exercises/update/"+id, Exericse)
+    axios
+      .post("http://localhost:5000/exercises/update/"+id, Exericse)
   };
 
   useEffect( () => {
 
-    axios.get('/exercises/'+id)
+    axios.get('http://localhost:5000/exercises/'+id)
       .then(response => {
         setExericse({
           username: response.data.username,
@@ -36,7 +37,7 @@ const EditExercise = () => {
       })
 
      axios
-      .get("/users")
+      .get("http://localhost:5000/users")
       .then(res => {
         console.log(res)
         res.data.map(user => {
