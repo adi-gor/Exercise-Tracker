@@ -17,13 +17,12 @@ const EditExercise = () => {
   const [Users, setUsers] = useState([])
 
   const onSubmit = () => {
-    axios
-      .post("http://localhost:5000/exercises/update/"+id, Exericse)
+    axios.post("https://exercise-tracker-backend-fnon.onrender.com/exercises/update/"+id, Exericse)
   };
 
   useEffect( () => {
 
-    axios.get('http://localhost:5000/exercises/'+id)
+    axios.get('https://exercise-tracker-backend-fnon.onrender.com/exercises/'+id)
       .then(response => {
         setExericse({
           username: response.data.username,
@@ -37,7 +36,7 @@ const EditExercise = () => {
       })
 
      axios
-      .get("http://localhost:5000/users")
+      .get("https://exercise-tracker-backend-fnon.onrender.com/users")
       .then(res => {
         console.log(res)
         res.data.map(user => {
