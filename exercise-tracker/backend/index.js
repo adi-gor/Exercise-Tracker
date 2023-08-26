@@ -7,7 +7,13 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://exercise-tracker-backend-4e46z2wx4-adi-gor.vercel.app"],
+        methods: ["GET", "POST"],
+        credentials: true
+    }
+));
 
 app.use(express.json());
 
