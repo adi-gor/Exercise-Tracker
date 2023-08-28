@@ -1,15 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
+import "bootstrap/js/src/collapse.js";
+
 
 const Navbar = (props) => {
   const {loginWithRedirect, isAuthenticated, logout} = useAuth0();
   props.isLoggedin(isAuthenticated);
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark" >
-      <div className="container">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          ExcerciseTracker
+          Excercise Tracker
         </Link>
         <button
           className="navbar-toggler"
@@ -42,10 +44,10 @@ const Navbar = (props) => {
             {
               !isAuthenticated ? (
               <li >
-              <button class="btn btn-dark" onClick={() => loginWithRedirect()}>Log In</button>
+              <button className="btn btn-dark" onClick={() => loginWithRedirect()}>Log In</button>
               </li> ) : (
               <li>
-              <button class="btn btn-dark" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</button>
+              <button className="btn btn-dark" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</button>
               </li> )
             }
           </ul>

@@ -25,7 +25,7 @@ function App() {
 
  return (
    <Router>
-     <div className="container">
+     <div className="container-fluid">
      <Navbar isLoggedin={handleLoggedin}/>
       <br/>
       {

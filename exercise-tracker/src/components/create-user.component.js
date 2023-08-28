@@ -44,8 +44,8 @@ export default class CreateUser extends Component {
               onChange={this.onChangeUsername}
               />
         </div>
-        <div className="form-group">
-          <input type="submit" value="Create User" className="btn btn-primary" />
+        <div className="form-group" style={{paddingTop: "10px"}}>
+          <input type="submit" value="Create User" className="btn btn-primary"/>
         </div>
       </form>
     </div>
