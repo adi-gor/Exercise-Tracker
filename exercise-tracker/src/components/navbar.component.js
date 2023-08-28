@@ -8,7 +8,7 @@ const Navbar = (props) => {
   const {loginWithRedirect, isAuthenticated, logout} = useAuth0();
   props.isLoggedin(isAuthenticated);
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           Excercise Tracker

@@ -25,9 +25,11 @@ function App() {
 
  return (
    <Router>
-     <div className="container-fluid">
-     <Navbar isLoggedin={handleLoggedin}/>
+     <div className="container-fullwidth">
+     <Navbar isLoggedin={handleLoggedin} />
+     </div>
       <br/>
+      <div className="container-fluid">
       {
         Auth && (
         <Routes>
