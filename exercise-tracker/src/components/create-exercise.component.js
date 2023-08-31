@@ -73,9 +73,6 @@ const CreateExercise = (props) => {
             type="text"
             className="form-control"
             value={Exercise.duration}
-            onChange={(e) =>
-              setExercise({ ...Exercise, duration: e.target.value })
-            }
           />
         </div>
         <div className="form-group">
