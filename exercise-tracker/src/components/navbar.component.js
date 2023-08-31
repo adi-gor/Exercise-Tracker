@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import "bootstrap/js/src/collapse.js";
-
+import "./buttonStyles.css";
 
 const Navbar = (props) => {
   const {loginWithRedirect, isAuthenticated, logout} = useAuth0();
@@ -34,6 +34,16 @@ const Navbar = (props) => {
             <li className="nav-item">
               <Link className="nav-link" to="/create">
                 Create Exercise Log
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/music">
+                Playlist
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/stopwatch">
+                Stopwatch
               </Link>
             </li>
             <li className="nav-item">

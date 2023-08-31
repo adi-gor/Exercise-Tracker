@@ -9,10 +9,12 @@ import EditExercise from "./components/edit-exercise.component";
 import CreateExercise from "./components/create-exercise.component";
 import CreateUser from "./components/create-user.component";
 import PlayMusic from "./components/play-music.component";
+import Stopwatch from './components/stopwatch.component';
 
 function App() {
 
   const [Auth, setAuth] = useState(false);
+  const [Minutes, setMinutes] = useState(0);
 
   function handleLoggedin(isAuthenticated) {
     if (isAuthenticated) {
@@ -21,6 +23,10 @@ function App() {
     else {
       setAuth(false);
     }
+  }
+
+  function handleMinutes(mins) {
+    setMinutes(mins);
   }
 
  return (
@@ -35,9 +41,10 @@ function App() {
         <Routes>
           <Route path="/" element={<ExercisesList/>} exact/>
           <Route path="/edit/:id" element={<EditExercise/>} />
-          <Route path="/create" element={<CreateExercise/>} />
+          <Route path="/create" element={<CreateExercise sendMinutes={Minutes}/>} />
           <Route path="/user" element={<CreateUser/>} />
           <Route path="/music" element={<PlayMusic/>} />
+          <Route path="/stopwatch" element={<Stopwatch getMinutes={handleMinutes}/>} />
         </Routes>
         )
       }
