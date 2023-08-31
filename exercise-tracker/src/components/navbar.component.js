@@ -37,13 +37,13 @@ const Navbar = (props) => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/music">
-                Playlist
+              <Link className="nav-link" to="/stopwatch">
+                Stopwatch
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/stopwatch">
-                Stopwatch
+              <Link className="nav-link" to="/music" target="_blank" rel="noopener noreferrer">
+                Playlist
               </Link>
             </li>
             <li className="nav-item">
