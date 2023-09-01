@@ -1,2 +1,2 @@
 # Exercise-Tracker
-This Web App keeps track of different exercises performed by users. Users can store details such as exercise type, total duration and date as well as edit and delete entries. User Authentication is done using auth0. Users can also listen to a workout playlist right from the app.
+This Web App keeps track of different exercises performed by users. A Stopwatch keeps track of the total duration (in minutes) of the exercise. Users can store details such as exercise type, total duration and date and also delete entries. Authentication is done using auth0. Users can also listen to a workout playlist right from the app.
