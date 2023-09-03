@@ -31,6 +31,9 @@ function App() {
 
  return (
    <Router>
+     <Routes>
+      <Route path="/music" element={<PlayMusic/>} />
+     </Routes>
      <div className="container-fullwidth">
      <Navbar isLoggedin={handleLoggedin} />
      </div>
@@ -43,7 +46,6 @@ function App() {
           <Route path="/edit/:id" element={<EditExercise/>} />
           <Route path="/create" element={<CreateExercise sendMinutes={Minutes}/>} />
           <Route path="/user" element={<CreateUser/>} />
-          <Route path="/music" element={<PlayMusic/>} />
           <Route path="/stopwatch" element={<Stopwatch getMinutes={handleMinutes}/>} />
         </Routes>
         )
