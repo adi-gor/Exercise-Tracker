@@ -15,6 +15,7 @@ function App() {
 
   const [Auth, setAuth] = useState(false);
   const [Minutes, setMinutes] = useState(0);
+  const [showNav, setNav] = useState(true);
 
   function handleLoggedin(isAuthenticated) {
     if (isAuthenticated) {
@@ -32,10 +33,10 @@ function App() {
  return (
    <Router>
      <Routes>
-      <Route path="/music" element={<PlayMusic/>} />
+      <Route path="/music" element={<PlayMusic hideNav={setNav}/>} />
      </Routes>
      <div className="container-fullwidth">
-     <Navbar isLoggedin={handleLoggedin} />
+     {showNav && <Navbar isLoggedin={handleLoggedin} />}
      </div>
       <br/>
       <div className="container-fluid">
@@ -47,6 +48,7 @@ function App() {
           <Route path="/create" element={<CreateExercise sendMinutes={Minutes}/>} />
           <Route path="/user" element={<CreateUser/>} />
           <Route path="/stopwatch" element={<Stopwatch getMinutes={handleMinutes}/>} />
+          
         </Routes>
         )
       }
