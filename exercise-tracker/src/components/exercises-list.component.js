@@ -8,9 +8,9 @@ const Exercise = props => (
     <td>{props.exercise.description}</td>
     <td>{props.exercise.duration}</td>
     <td>{props.exercise.date.substring(0,10)}</td>
-    <td>
+    {/*<td>
       <a href="#" onClick={() => { props.deleteExercise(props.exercise._id) }} className="btn btn-danger">Delete</a>
-    </td>
+    </td>*/}
   </tr>
 )
 
@@ -41,7 +41,7 @@ export default class ExercisesList extends Component {
 
   exerciseList() {
     return this.state.exercises.map(currentexercise => {
-      return <Exercise exercise={currentexercise} deleteExercise={this.deleteExercise} key={currentexercise._id} />;
+      return <Exercise exercise={currentexercise} key={currentexercise._id} />;
     });
   }  
 
@@ -58,7 +58,6 @@ export default class ExercisesList extends Component {
             <th>Description</th>
             <th>Duration</th>
             <th>Date</th>
-            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
